@@ -17,6 +17,7 @@ class Regency extends Model
      * @var string
      */
     protected $table = 'l2_regencies';
+    protected $guarded = [];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -26,6 +27,8 @@ class Regency extends Model
     protected $hidden = [
         'province_id'
     ];
+
+    public $timestamps = false;
 
     /**
      * Regency belongs to Province.

@@ -16,7 +16,8 @@ class District extends Model
      *
      * @var string
      */
-    protected $table = 'l3_districts';
+    protected $table   = 'l3_districts';
+    protected $guarded = [];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -26,6 +27,8 @@ class District extends Model
     protected $hidden = [
         'regency_id'
     ];
+
+    public $timestamps = false;
 
     /**
      * District belongs to Regency.

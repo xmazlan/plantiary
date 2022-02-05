@@ -16,7 +16,8 @@ class Village extends Model
      *
      * @var string
      */
-    protected $table = 'l4_districts';
+    protected $table = 'l4_villages';
+    protected $guarded = [];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -26,6 +27,8 @@ class Village extends Model
     protected $hidden = [
         'regency_id'
     ];
+
+    public $timestamps = false;
 
     /**
      * District belongs to Regency.
