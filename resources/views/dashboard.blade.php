@@ -12,4 +12,5 @@
             </div>
         </div>
     </div>
+    @section('tab_title', 'Dashboard')
 </x-app-layout>

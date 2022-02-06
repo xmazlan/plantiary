@@ -5,8 +5,9 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
+                    <a href="{{ route('welcome') }}">
+                        {{-- <x-jet-application-mark class="block h-9 w-auto" /> --}}
+                        <img alt="logo" src="{{ asset('assets/logo/logo-pelalawan-217x300.png') }}" width="35px"/>
                     </a>
                 </div>
 

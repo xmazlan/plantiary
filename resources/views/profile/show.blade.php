@@ -42,4 +42,5 @@
             @endif
         </div>
     </div>
+    @section('tab_title', 'Profile')
 </x-app-layout>
