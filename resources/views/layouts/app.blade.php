@@ -42,5 +42,25 @@
         @stack('modals')
 
         @livewireScripts
+
+
+        @if (env('LIVEWIRE_LOG') === true)
+        <script>
+            let logComponentsData = function () {
+                Livewire.components.components().forEach(component => {
+                    console.log("%cComponent: " + component.name, "font-weight:bold");
+                    console.log(component.data);
+                });
+            };
+
+            document.addEventListener("livewire:load", function(event) {
+                logComponentsData();
+
+                Livewire.hook('message.processed', (message, component) => {
+                    logComponentsData();
+                });
+            });
+        </script>
+        @endif
     </body>
 </html>
